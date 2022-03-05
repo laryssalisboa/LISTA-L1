@@ -1,0 +1,40 @@
+public class JogoAdivinhaNumero {
+
+    public static void dica(int palpite, int numero){
+        if(palpite > numero){
+            System.out.println("Seu palpite é maior que o número sorteado.");
+        } else {
+            if(palpite < numero){
+                    System.out.println("Seu palpite é menor que o número sorteado.");
+            } else {
+                System.out.println("Parabéns, você acertou! O número era " + numero);
+                
+            }
+        }
+            
+    }
+    
+    public static void main(String[] args) {
+        int palpite=0, 
+            sorteado;
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        Random geradorDeAleatorios = new Random();
+        sorteado = geradorDeAleatorios.nextInt(99) + 1;
+        System.out.println("Número entre 0 e 99 sorteado!");
+        
+        do{
+            System.out.printf("\n\n\n\n-----------------\n");
+            
+            System.out.print("Qual seu palpite: ");
+            palpite = entrada.nextInt();
+            
+            tentativas++;
+            
+            dica(palpite,sorteado);
+        }while (palpite != sorteado);
+
+    }
+
+}
