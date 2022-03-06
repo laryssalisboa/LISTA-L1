@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class Lampada {
+	private String on,off;
+	private int estado;
+	private double clicks;
+
+
+	//Métodos construtores
+	public Lampada() {}
+	public Lampada(String on,String off,int estado,double clicks){
+		this.estado = estado;
+		this.on = on;
+		this.off = off;
+		this.clicks = clicks;
+	}
+
+	//Métodos getters
+	public String getOn(){
+		return this.on;
+	}
+	public String getOff(){
+		return this.off;
+	}
+	public Int getEstado(){
+		return this.estado;
+	}
+	public Double getClicks(){
+		return this.clicks;
+	}
+
+	//Métodos setters
+	public void setOn(String on){
+		this.on = on;
+	}
+	public void setOff(String off){
+		this.off = off;
+	}
+	public void setEstado(int estado){
+		this.estado = estado;
+	}
+	public void setClicks(Double clicks){
+		this.clicks = clicks;
+	}
+	
+
+	//Método toString
+	public String toString(){
+		String retorno="";
+
+		retorno += "Objeto lâmpada:\n";
+		retorno += "\tEstado: "+this.estado+"\n";
+		retorno += "\tClicks: "+this.clicks+"\n";
+		retorno += "\tPotência: "+this.potencia+"\n";
+		if(this.status==true)	retorno += "\tStatus: ligado\n";
+		else retorno+= "\tStatus: desligado\n";
+
+		return retorno;
+	}
+
+	//Método ascender
+	public void Ascender(){
+		setStatus(true);
+	}
+
+	//Método apagar
+	public void Apagar(){
+		setStatus(false);
+	}
+}
