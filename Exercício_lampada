@@ -1,0 +1,24 @@
+package exercicio_lampada;
+
+public class Lampada {
+	String status = "off";
+	static int qtdClicks;
+	
+	void clicked() {
+		
+		qtdClicks++;
+		
+		if(status == "on") {
+			status = "off";
+			System.out.println("A lâmpada foi apagada");
+			
+		}else if(status == "off") {
+			status = "on";
+			System.out.println("A lâmpada foi acesa");
+		}
+		if(qtdClicks >= 3) {
+			status = "off";
+			System.out.println("A lâmpada está quebrada porque foi clicada demais");
+		}
+	}	
+}
